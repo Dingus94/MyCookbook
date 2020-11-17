@@ -5,9 +5,43 @@ client = commands.Bot(command_prefix='!')
 
 TOKEN = 'XXXSECRETXXX'
 
+cogs = ['cogs.events', 'cogs.utils']
+
+for cog in cogs:
+    try:
+        client.load_extension(cog)
+    except Exception as e:
+        print(f'Could not load cog {cog}:{str(e)}')
+
 @client.event
 async def on_ready():
     print('Hello!')
+
+@client.command()
+async def loadcog(ctx, cogname = None):
+
+    if cogname is None:
+        return
+
+    try:
+        client.load_extension(cogname)
+    except Exception as e:
+        print(f'Could not load cog{cogname}: {str(e)}')
+    else:
+        print('Laded Cog Succesfully')
+
+@client.command()
+async def unloadcog(ctx, cogname = None):
+
+    if cogname is None:
+        return
+
+    try:
+        client.unload_extension(cogname)
+    except Exception as e:
+        print(f'Could not unload cog{cogname}: {str(e)}')
+    else:
+        print('unloaded Cog Succesfully')
 
 @client.command()
 async def ping(ctx):
