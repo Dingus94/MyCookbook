@@ -1,6 +1,8 @@
 import discord
 from discord.ext import commands
 
+# discord bot
+
 client = commands.Bot(command_prefix='!')
 
 TOKEN = 'XXXSECRETXXX'
