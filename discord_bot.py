@@ -30,7 +30,7 @@ async def loadcog(ctx, cogname = None):
     except Exception as e:
         print(f'Could not load cog{cogname}: {str(e)}')
     else:
-        print('Laded Cog Succesfully')
+        print('Loaded Cog Succesfully')
 
 @client.command()
 async def unloadcog(ctx, cogname = None):
