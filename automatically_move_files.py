@@ -27,7 +27,6 @@ class MyHandler(FileSystemEventHandler):
 
 folder_to_track = r"C:\Users\Thoma\Downloads"
 folder_destination = str(MyHandler.destination_decider(1))
-# folder_destination = r"F:\Downloads"
 event_handler = MyHandler()
 observer = Observer()
 observer.schedule(event_handler, folder_to_track, recursive=True)
