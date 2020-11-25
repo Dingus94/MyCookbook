@@ -26,9 +26,6 @@ class Utils(commands.Cog):
         await ctx.send(':wave:', embed = embed)
 
 
-        out.show()
-
-
 def setup(client):
 
     client.add_cog(Utils(client))

@@ -10,11 +10,11 @@ class Events(commands.Cog):
     @commands.Cog.listener()
     async def on_member_join(self, member):
 
-        await self.client.get_channel("""CHANNEL ID""").send(str(member + 'Joined the server!'))
+        await self.client.get_channel("778315809088340038").send(str(member + 'Joined the server!'))
 
     @commands.Cog.listener()
     async def on_member_join(self, member):
-        await self.client.get_channel("""CHANNEL ID""").send(str(member + 'Left the server! :sob:'))
+        await self.client.get_channel("778315809088340038").send(str(member + 'Left the server! :sob:'))
 
 def setup(client):
     client.add_cog(Events(client))
