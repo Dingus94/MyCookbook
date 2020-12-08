@@ -1,7 +1,7 @@
 from selenium import webdriver
 import time
 from tkinter import *
-
+###
 
 driver = webdriver.PhantomJS(executable_path=r'C:\phantomjs-2.1.1-windows\bin\phantomjs.exe ')
 driver.get('https://www.glslw-glvm.com/R2/jsp/NiaBrdgStatus15min.jsp?language=E')

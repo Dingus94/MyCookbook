@@ -27,3 +27,4 @@ e = PartsColor() # Instantiate two objects to represent points
 f = PartsColor()
 
 print(e.hood, f.wheels, e.hood, f.wheels, e.doors, f.doors)  # Assign each point a unique location
+###
